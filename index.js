@@ -26,17 +26,35 @@ app.post('/perform_calc', (req, res)=>{
     //send successful reponse
     res.status(200).send(requestedCalc);
 
+   
+
     if (requestedCalc.operation == "add"){
-        console.log(calc.add(requestedCalc.value_1,requestedCalc.value_2));
+       
+        console.log("Operation: Addition");
+        console.log("Value 1: "+ requestedCalc.value_1 );
+        console.log("Value 1: "+ requestedCalc.value_2 );
+        console.log("Result: " + calc.add(requestedCalc.value_1,requestedCalc.value_2));
     }
     else if(requestedCalc.operation == "sub"){
-        console.log(calc.sub(requestedCalc.value_1,requestedCalc.value_2));
+
+        console.log("Operation: Subtraction");
+        console.log("Value 1: "+ requestedCalc.value_1 );
+        console.log("Value 1: "+ requestedCalc.value_2 );
+        console.log("Result: " + calc.sub(requestedCalc.value_1,requestedCalc.value_2));
     }
     else if(requestedCalc.operation == "mul"){
-        console.log(calc.mul(requestedCalc.value_1,requestedCalc.value_2));
+
+        console.log("Operation: Multiplication");
+        console.log("Value 1: "+ requestedCalc.value_1 );
+        console.log("Value 1: "+ requestedCalc.value_2 );
+        console.log("Result: " + calc.mul(requestedCalc.value_1,requestedCalc.value_2));
     }
     else if(requestedCalc.operation == "div"){
-        console.log(calc.div(requestedCalc.value_1,requestedCalc.value_2));
+
+        console.log("Operation: Division");
+        console.log("Value 1: "+ requestedCalc.value_1 );
+        console.log("Value 1: "+ requestedCalc.value_2 );
+        console.log("Result: " + calc.div(requestedCalc.value_1,requestedCalc.value_2));
     }
     else{
         console.log("Input Error: Must request add, sub, mul or div for an operation");
